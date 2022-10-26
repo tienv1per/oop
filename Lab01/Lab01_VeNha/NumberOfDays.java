@@ -47,7 +47,6 @@ public class NumberOfDays{
         List<String> list30 = Arrays.asList(days_30);
         List<String> list29 = Arrays.asList(days_29);
         
-        int num_digit_year;
         String month;
         int year;
         Scanner keyboard;
@@ -58,9 +57,8 @@ public class NumberOfDays{
             month = keyboard.nextLine();
             System.out.println("Nhap nam can tim: ");
             year = keyboard.nextInt();
-            num_digit_year = String.valueOf(year).length();
             
-        } while(num_digit_year != 4 || (!(list29.contains(month)) && !(list30.contains(month)) && !(list31.contains(month))));
+        } while(year <= 0 || (!(list29.contains(month)) && !(list30.contains(month)) && !(list31.contains(month))));
 
         leap = checkLeapYear(year);
 
