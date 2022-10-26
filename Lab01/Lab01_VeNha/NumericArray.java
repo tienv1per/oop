@@ -2,29 +2,16 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class NumericArray{
-    public static void op1(){
-        int[] numbers = new int[]{20, 30, 25, 35, -16, 60, -100};
-        int sum = 0;
-        for(int i=0; i < numbers.length ; i++){
-            sum = sum + numbers[i];
-        }
-        double average = sum / numbers.length;
-        Arrays.sort(numbers);
-        System.out.println("Array after sorted: ");
-        System.out.println(Arrays.toString(numbers));
-        System.out.println("Sum value of the array elements is : " + sum); 
-        System.out.println("Average value of the array elements is : " + average); 
-    }
 
-    public static void op2(int[] array){
+    public static void printArray(int A[]){
         int sum = 0;
-        for (int i = 0; i < array.length; i++){
-            sum = sum + array[i];
+        for(int i=0; i < A.length ; i++){
+            sum = sum + A[i];
         }
-        double average = sum / array.length;
-        Arrays.sort(array);
+        double average = sum / A.length;
+        Arrays.sort(A);
         System.out.println("Array after sorted: ");
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(A));
         System.out.println("Sum value of the array elements is : " + sum); 
         System.out.println("Average value of the array elements is : " + average); 
     }
@@ -38,7 +25,8 @@ public class NumericArray{
         
 
         if (menu_ans.trim().equals("1")){
-            op1();
+            int A[] = new int[]{20, 30, 25, 35, -16, 60, -100};
+            printArray(A);
         }
         else if (menu_ans.trim().equals("2")){
             Scanner sc = new Scanner(System.in);
@@ -51,7 +39,7 @@ public class NumericArray{
                 array[i] = sc.nextInt();
             }
             sc.close();
-            op2(array);
+            printArray(array);
 
         menu.close();
         }
