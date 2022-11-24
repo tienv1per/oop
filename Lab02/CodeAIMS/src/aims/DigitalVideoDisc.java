@@ -13,28 +13,32 @@ public class DigitalVideoDisc {
 
     private float cost;
 
-    public DigitalVideoDisc() {
-
-    }
-
     public DigitalVideoDisc(String title){
         this.title = title;
+        nbDigitalVideoDisc++;
+        this.id = nbDigitalVideoDisc;
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
         this(title);
         this.category = category;
         this.cost = cost;
+        nbDigitalVideoDisc++;
+        this.id = nbDigitalVideoDisc;
     }
 
     public DigitalVideoDisc(String title, String category, String director, float cost) {
         this(title, category, cost);
         this.director = director;
+        nbDigitalVideoDisc++;
+        this.id = nbDigitalVideoDisc;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
         this(title, category, director, cost);
         this.length = length;
+        nbDigitalVideoDisc++;
+        this.id = nbDigitalVideoDisc;
     }
 
     public int getId() {
