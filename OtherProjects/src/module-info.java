@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author tienviper
+ *
+ */
+module OtherProjects {
+}
