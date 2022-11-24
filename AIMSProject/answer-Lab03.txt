@@ -1,0 +1,14 @@
+Câu 1: Method overloading
+Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. Compare to an array parameter. What do you prefer in this case?
+Trả lời: Em thích method addDigitalVideoDisc cho phép truyền nhiều dvd hơn. Do không phải khởi tạo mảng trước khi truyền vào
+
+Câu 2: Passing parameter
+
+Câu hỏi: 
+    a. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+    b. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+    c. Please write a swap() method that can correctly swap the two objects.
+Trả lời:
+    a. Do trong java là truyền tham trị, nên jungleDVD và cinderellaDVD trong hàm swap là bản sao của jungleDVD và cinderellaDVD ở bên ngoài. Việc swap hai bản sao không ảnh hưởng đến bản gốc.
+    b. Bản sao jungleDVD được "trỏ" tới cùng một vị trí trên heap. Nên khi thay đổi giá trị của object, bản chất là đang thay đổi trên heap, nên jungleDVD (bên ngoài) cũng được thay đổi giá trị.
+    c. Tạo một wrapper class chứa class con. Khi này việc thay đổi thuộc tính trong wrapper class sẽ tương đương việc thay đổi object của class con.
