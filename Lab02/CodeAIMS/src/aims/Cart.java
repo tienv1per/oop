@@ -28,6 +28,19 @@ public class Cart {
             }
         }
     }
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+    	if(qtyOrdered >= 19) {
+    		System.out.println("Exceeds the permitted limits");
+    	}
+    	else {
+    		itemsOrdered[qtyOrdered] = dvd1;
+    		System.out.println("The disc has been added");
+    		qtyOrdered++;
+    		itemsOrdered[qtyOrdered] = dvd2;
+    		System.out.println("The disc has been added");
+    		qtyOrdered++;
+    	}
+    }
     public void removeDigitalVideoDisc(DigitalVideoDisc disc){
         int index_disc = 0;
         for(int i=0; i<qtyOrdered; i++){
