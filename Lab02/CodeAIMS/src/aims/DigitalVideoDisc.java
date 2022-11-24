@@ -14,10 +14,12 @@ public class DigitalVideoDisc {
     private float cost;
 
     public DigitalVideoDisc() {
-
+    	nbDigitalVideoDisc++;
+    	this.id = nbDigitalVideoDisc;
     }
-
+    
     public DigitalVideoDisc(String title){
+    	this();
         this.title = title;
     }
 
@@ -41,10 +43,6 @@ public class DigitalVideoDisc {
         return id;
     }
 
-    public void setId() {
-        nbDigitalVideoDisc++;
-        this.id = nbDigitalVideoDisc;
-    }
     public String getTitle() {
         return title;
     }
