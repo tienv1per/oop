@@ -5,5 +5,5 @@
  * @author tienviper
  *
  */
-module AIMS_Project {
+module AIMSProjects {
 }
