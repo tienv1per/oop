@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ADMIN
- *
- */
-module AIMS {
-}
