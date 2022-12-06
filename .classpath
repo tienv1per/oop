@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AIMSProject/src"/>
+	<classpathentry kind="src" path="Lab01/Lab01_TrenLop"/>
+	<classpathentry kind="src" path="Lab01/Lab01_VeNha"/>
+	<classpathentry kind="src" path="Lab02/CodeAIMS/src"/>
+	<classpathentry excluding="Lab01/Lab01_TrenLop/|Lab01/Lab01_VeNha/" kind="src" path="OtherProjects/src"/>
+	<classpathentry kind="src" path="OtherProjects/src/Lab01/Lab01_TrenLop"/>
+	<classpathentry kind="src" path="OtherProjects/src/Lab01/Lab01_VeNha"/>
+	<classpathentry kind="output" path="AIMSProject/bin"/>
+</classpath>
