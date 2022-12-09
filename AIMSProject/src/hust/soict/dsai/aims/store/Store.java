@@ -1,35 +1,30 @@
 package hust.soict.dsai.aims.store;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+// import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Store {
-    private DigitalVideoDisc[] itemslnStore = new DigitalVideoDisc[10];
+    private List<Media> itemslnStore = new ArrayList<>();
     private int quantity = 0;
-    public void addDVD(DigitalVideoDisc ...dvdList){
-        for(DigitalVideoDisc dvd:dvdList){
-            itemslnStore[quantity] = dvd;
+    public void addMedia(Media ...m_list){
+        for(Media m:m_list){
+            itemslnStore.add(m);
             quantity++;
         }
     }
-    public void removeDVD(DigitalVideoDisc dvd){
-        int dvdID = 0;
-        for (int i=0; i<quantity; i++) {
-            if (itemslnStore[i].equals(dvd)) {
-                break;
-            }
-            dvdID++;
-        }
-        for(int i=dvdID; i<quantity; i++){
-            itemslnStore[i] = itemslnStore[i+1];
-        }
+    public void removeMedia(Media m){
+        itemslnStore.remove(m);
         quantity --;
     }
 
-    public void print() {
-        System.out.println("***********************STORE***********************");
-        for (int i = 0; i < quantity; i++) {
-            System.out.println(itemslnStore[i].toString());
-        }
-        System.out.println("**************************************************");
-    }
+//    public void print() {
+//        System.out.println("***********************STORE***********************");
+//        for (int i = 0; i < quantity; i++) {
+//            System.out.println(itemslnStore[i].toString());
+//        }
+//        System.out.println("**************************************************");
+//    }
 }

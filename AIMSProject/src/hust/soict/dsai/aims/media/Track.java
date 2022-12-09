@@ -1,34 +1,34 @@
 package hust.soict.dsai.aims.media;
 
-public class Track {
-	private int length;
-	private String title;
-	
-	public Track(int length, String title) {
-		super();
-		this.length = length;
-		this.title = title;
-	}
+public class Track implements IPlayable{
+    private String title;
+    private int length;
 
-	public int getLength() {
-		return length;
-	}
+    public Track() {
 
-	public String getTitle() {
-		return title;
-	}
+    }
 
-	public void setLength(int length) {
-		this.length = length;
-	}
+    public Track(String title, int length) {
+        this.title = title;
+        this.length = length;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public int getLength() {
+        return length;
+    }
 
-	}
-
+    @Override
+    public void play() {
+        System.out.print("Playing Track: " + this.title + ". ");
+        System.out.println("Track length: " + this.length);
+    }
+    @Override
+    public boolean equals(Object o){
+        Track tmp = (Track)o;
+        return this.title.equals(tmp.getTitle()) && this.length == tmp.getLength();
+    }
 }
