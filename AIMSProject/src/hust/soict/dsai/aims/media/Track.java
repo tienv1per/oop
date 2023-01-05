@@ -1,14 +1,12 @@
 package hust.soict.dsai.aims.media;
 
-public class Track implements IPlayable{
-    private String title;
-    private int length;
-
-    public Track() {
-
-    }
-
-    public Track(String title, int length) {
+public class Track implements Playable {
+	private String title;
+	private int length;	
+	public Track() {
+		// TODO Auto-generated constructor stub
+	}
+	public Track(String title, int length) {
         this.title = title;
         this.length = length;
     }
@@ -20,7 +18,6 @@ public class Track implements IPlayable{
     public int getLength() {
         return length;
     }
-
     @Override
     public void play() {
         System.out.print("Playing Track: " + this.title + ". ");

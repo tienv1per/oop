@@ -1,0 +1,14 @@
+Câu 1:
+Answer:
+If the passing object is not an instance of Media => Runtime error
+
+Câu 2:
+Answer:
+Should implement the Comparable interface in class Media
+
+Câu 3:
+Answer:
+Implement compareTo() method be to reflect the ordering that we want
+public int compareTo(Media media) {   return Comparator.comparing(Media::getCost)     .thenComparing(Media::getTitle)     .compare(this, media); }
+Implement compareTo() method be to reflect the ordering that we want in DigitalVideoDisc
+public int compareTo(Media media) {   DigitalVideoDisc dvd =(DigitalVideoDisc) media;   return Comparator.comparing(DigitalVideoDisc::getTitle)     .thenComparing(DigitalVideoDisc::getLength)     .thenComparing(DigitalVideoDisc::getCost)     .compare(this, dvd); }

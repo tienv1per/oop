@@ -1,5 +1,5 @@
 package hust.soict.dsai.aims.media;
 
-public interface IPlayable {
+public interface Playable {
     void play();
 }

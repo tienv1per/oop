@@ -9,3 +9,4 @@ public class MediaComparatorByTitleCost implements Comparator<Media> {
         return check != 0 ? check : Math.round(o1.getCost() - o2.getCost());
     }
 }
+

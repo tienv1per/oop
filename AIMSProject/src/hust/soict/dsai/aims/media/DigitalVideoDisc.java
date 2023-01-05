@@ -1,10 +1,16 @@
 package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc extends Disc implements IPlayable{
+
+public class DigitalVideoDisc extends Disc implements Playable {
+//    private String director;
+//
+//    private int length;
+
+
+// update the nbDigitalVideoDiscs, assign the appropriate value for the id
     public DigitalVideoDisc() {
         super();
     }
-
     public DigitalVideoDisc(String title) {
         super(title);
     }
@@ -17,8 +23,8 @@ public class DigitalVideoDisc extends Disc implements IPlayable{
         super(title, category, director, cost);
     }
 
-    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-        super(title, category, director, length, cost);
+    public DigitalVideoDisc(String title, String category, float cost, String director, int length){
+        super(title, category, cost, director, length);
     }
 
     public void setId(int id) {
@@ -42,7 +48,6 @@ public class DigitalVideoDisc extends Disc implements IPlayable{
     public boolean isMatch(String title) {
         return this.title.equals(title);
     }
-
     @Override
     public boolean equals(Object obj) {
         DigitalVideoDisc disc = (DigitalVideoDisc) obj;
@@ -50,7 +55,6 @@ public class DigitalVideoDisc extends Disc implements IPlayable{
                 && this.director.equals(disc.director) && this.length == disc.length
                 && this.cost == disc.cost;
     }
-
     @Override
     public void play() {
         System.out.println("Playing DVD: " + this.getTitle());
