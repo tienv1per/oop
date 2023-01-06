@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
-    private List<Media> itemsInStore = new ArrayList<Media>();
+    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
     private int quantity = 0;
     public void addMedia(Media ...m_list){
         for(Media m:m_list){
@@ -18,6 +18,10 @@ public class Store {
         itemsInStore.remove(m);
         quantity --;
     }
+    
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
 
 
 //// print Store

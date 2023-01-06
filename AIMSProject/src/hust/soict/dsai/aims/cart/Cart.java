@@ -1,11 +1,14 @@
 package hust.soict.dsai.aims.cart;
 import hust.soict.dsai.aims.media.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
     public final static int MAX_NUMBERS_ORDERED = 20;
-    private List<Media> itemsOrdered = new ArrayList<Media>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
     public void addMedia(Media m){
         if(itemsOrdered.size() <= MAX_NUMBERS_ORDERED && !itemsOrdered.contains(m)){
             itemsOrdered.add(m);
@@ -30,7 +33,7 @@ public class Cart {
         return itemsOrdered.size();
     }
 
-    public List<Media> getItemOrdered() {
+    public ObservableList<Media> getItemOrdered() {
         return itemsOrdered;
     }   
     public Media searchByTitle(String title) {

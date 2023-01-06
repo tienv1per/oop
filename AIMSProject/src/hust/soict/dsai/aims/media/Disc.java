@@ -42,6 +42,15 @@ public class Disc extends Media {
 	public void setDirector(String director) {
 		this.director = director;
 	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
 	public String toString() {
         return null;
     }
